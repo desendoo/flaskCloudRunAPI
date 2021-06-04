@@ -1,6 +1,6 @@
 steps:
   # Build and push the container image
-- name: "gcr.io/final-project/api:v1.0"
+- name: "gcr.io/kaniko-project/executor:latest"
   args: ["--cache=true", "--cache-ttl=48h", "--destination=gcr.io/$PROJECT_ID/api:v1.0"]
   # Deploy container image to Cloud Run
 - name: "gcr.io/cloud-builders/gcloud"
