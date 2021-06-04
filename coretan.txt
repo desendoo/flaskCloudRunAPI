@@ -1,0 +1,15 @@
+gcloud services enable run.googleapis.com
+
+===== Open Cloud Build settings > Service account permission > enable Cloud Run Admin role
+
+gcloud builds submit --config cloudbuild.yaml .
+
+
+
+
+
+
+
+
+
+
