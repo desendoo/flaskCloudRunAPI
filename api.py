@@ -2,7 +2,7 @@
 import os
 from flask import Flask, jsonify, request
 from google.cloud import vision
-from firebase_admin import firestore, initialize_app
+from firebase_admin import firestore
 
 # Initialize Flask Application
 app = Flask(__name__)
