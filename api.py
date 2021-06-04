@@ -1,11 +1,14 @@
 # Import standart libraries
-import os
 from flask import Flask, jsonify, request
 from google.cloud import vision
-from firebase_admin import firestore, initialize_app
+from firebase_admin import credentials, firestore, initialize_app
 
 # Initialize Flask Application
 app = Flask(__name__)
+
+# Initialize Firestore reference
+cred = credentials.Certificate("key.json")
+firebaseRef = initialize_app(cred)
 
 # API that returns JSON as a result after processing an image
 @app.route("/analyze", methods=["POST"])
@@ -87,6 +90,5 @@ def query():
             "message": doc.to_dict()
         }), 200
 
-port = int(os.environ.get("PORT", 8080))
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=port)
+    app.run(debug=True, host="0.0.0.0")
