@@ -6,7 +6,7 @@
  1. Create a project in Firebase console (which synchronously integrated with Google Cloud in the background procecss) via https://console.firebase.google.com
  2. Choose Storage option and follow the provided guidance to create a Cloud Storage.
  3. Choose Firestore Database option and follow the provided guidance to create a Firestore Database.
- 4. Open/provision a Cloud Shell.
+ 4. Go to https://console.cloud.google.com and open/provision a Cloud Shell.
      1. Set environment variable:
         ```
         export PROJECT_ID=$(gcloud info --format='value(config.project)');
