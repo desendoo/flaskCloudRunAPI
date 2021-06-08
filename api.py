@@ -8,7 +8,7 @@ from firebase_admin import firestore
 app = Flask(__name__)
 
 # API that returns JSON as a result after processing an image
-@app.route("/analyze", methods=["POST"])
+@app.route("/analyze", methods=["GET", "POST"])
 def analyze():
     # Creates AutoVision client
     visionClient = vision.ImageAnnotatorClient()
